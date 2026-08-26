@@ -12,6 +12,11 @@
     }
   ],
   "support_versions": ">=0.1.0-rc.6",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-code-review",
+    "repository": "https://github.com/dsh-plugins/dsh-code-review",
+    "issues": "https://github.com/dsh-plugins/dsh-code-review/issues"
+  },
   "relationship": [
     {
       "type": "dependency",

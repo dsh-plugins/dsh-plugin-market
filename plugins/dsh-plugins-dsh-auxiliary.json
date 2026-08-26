@@ -12,6 +12,11 @@
     }
   ],
   "support_versions": ">=0.1.0-rc.6",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-auxiliary",
+    "repository": "https://github.com/dsh-plugins/dsh-auxiliary",
+    "issues": "https://github.com/dsh-plugins/dsh-auxiliary/issues"
+  },
   "relationship": [
     {
       "type": "dependency",

@@ -13,6 +13,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.6",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-approve-for-me",
+      "repository": "https://github.com/dsh-plugins/dsh-approve-for-me",
+      "issues": "https://github.com/dsh-plugins/dsh-approve-for-me/issues"
+    },
     "relationship": [
       {
         "type": "dependency",
@@ -35,6 +40,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.6",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-auxiliary",
+      "repository": "https://github.com/dsh-plugins/dsh-auxiliary",
+      "issues": "https://github.com/dsh-plugins/dsh-auxiliary/issues"
+    },
     "relationship": [
       {
         "type": "dependency",
@@ -57,6 +67,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.6",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-better-sidebar-loader",
+      "repository": "https://github.com/dsh-plugins/dsh-better-sidebar-loader",
+      "issues": "https://github.com/dsh-plugins/dsh-better-sidebar-loader/issues"
+    },
     "relationship": [
       {
         "type": "dependency",
@@ -79,6 +94,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.6",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-code-review",
+      "repository": "https://github.com/dsh-plugins/dsh-code-review",
+      "issues": "https://github.com/dsh-plugins/dsh-code-review/issues"
+    },
     "relationship": [
       {
         "type": "dependency",
@@ -106,6 +126,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.1",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-loader",
+      "repository": "https://github.com/dsh-plugins/dsh-loader",
+      "issues": "https://github.com/dsh-plugins/dsh-loader/issues"
+    },
     "relationship": []
   },
   {
@@ -122,6 +147,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.6",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-network-settings",
+      "repository": "https://github.com/dsh-plugins/dsh-network-settings",
+      "issues": "https://github.com/dsh-plugins/dsh-network-settings/issues"
+    },
     "relationship": [
       {
         "type": "dependency",
@@ -144,6 +174,11 @@
       }
     ],
     "support_versions": ">=0.1.0-rc.6",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-thought-buddy",
+      "repository": "https://github.com/dsh-plugins/dsh-thought-buddy",
+      "issues": "https://github.com/dsh-plugins/dsh-thought-buddy/issues"
+    },
     "relationship": [
       {
         "type": "dependency",

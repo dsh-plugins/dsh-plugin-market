@@ -1,70 +1,95 @@
+<div align="center">
+
+![Banner](./docs/banner.png)
+
 # dsh-plugin-market
 
-DeepSeek Harness 插件市场 —— 以结构化 JSON 描述插件及其依赖/兼容关系，
-自动聚合为单一 `plugins.json` 供 dsh-plugins.github.io 站点消费。
+**A structured plugin marketplace for DeepSeek Harness — each plugin described as JSON, auto-aggregated into a single `plugins.json` for the dsh-plugins.github.io site.**
 
-## 目录结构
+English | [简体中文](README.zh_CN.md)
+
+</div>
+
+## Directory Structure
 
 ```
-plugins/                  # 每个插件一个 JSON 描述文件
+plugins/                  # One JSON descriptor file per plugin
   dsh-plugins-<id>.json
 scripts/
-  aggregate.mjs           # 聚合脚本：plugins/*.json → plugins.json
-plugins.json              # 聚合产物（由 workflow 自动维护）
+  aggregate.mjs           # Aggregation script: plugins/*.json → plugins.json
+plugins.json              # Aggregated output (maintained by the workflow)
 .github/workflows/
-  aggregate.yml           # push 到 plugins/ 时聚合 + 通知站点仓库
+  aggregate.yml           # Aggregates on push to plugins/ + notifies the site repo
 ```
 
-## 插件描述格式
+## Plugin Descriptor Format
 
 ```jsonc
 {
-  "id": "@dsh-plugin/dsh-auxiliary",        // 插件唯一 id（npm 包名或 github:owner/repo）
-  "name": "DSH Auxiliary",                  // 展示名
-  "description": [                          // 多语言描述（可省略，或直接给字符串）
+  "id": "@dsh-plugin/dsh-auxiliary",        // Unique plugin id (npm package name or github:owner/repo)
+  "name": "DSH Auxiliary",                  // Display name
+  "description": [                          // Localized descriptions (optional; or a plain string)
     { "language": "en-US", "content": "..." },
     { "language": "zh-CN", "content": "..." }
   ],
-  "support_versions": ">=0.1.0-rc.6",       // 支持的 dsh 版本（semver range 或版本数组）
-  "relationship": [                         // 依赖/冲突关系（可省略）
+  "support_versions": ">=0.1.0-rc.6",       // Supported dsh versions (semver range or array)
+  "urls": {                                 // Project links (optional)
+    "homepage": "https://github.com/dsh-plugins/dsh-auxiliary",
+    "repository": "https://github.com/dsh-plugins/dsh-auxiliary",
+    "issues": "https://github.com/dsh-plugins/dsh-auxiliary/issues"
+  },
+  "relationship": [                         // Dependency / conflict relations (optional)
     { "type": "dependency", "id": "@dsh-plugin/dsh-loader", "versions": ">=1.3.0" },
     { "type": "incompatibility", "id": "@dsh-plugin/dsh-auxiliary", "versions": "*" }
   ]
 }
 ```
 
-### 字段说明
+### Field Reference
 
-- `id` — 必填。插件唯一标识：npm 包名（`@scope/name`）或
-  `github:owner/repo`。
-- `name` — 必填。人类可读的插件名。
-- `description` — 可选。字符串或 `{language, content}[]` 多语言数组。
-- `support_versions` — 可选。semver range 字符串（`>=0.1.0-rc.6`）、
-  interval（`[0.1.0-rc.6, 0.1.1)`）或版本数组（`["0.1.0-rc.6","0.1.0-rc.7"]`）。
-  缺省表示任意版本。
-- `relationship` — 可选。`{type, id, versions}[]`，`type` ∈
-  `dependency` | `incompatibility`，`versions` 为 semver range，
-  `*` 表示任意版本。
+- `id` — **Required.** Unique plugin identifier: an npm package name
+  (`@scope/name`) or `github:owner/repo`.
+- `name` — **Required.** Human-readable plugin name.
+- `description` — Optional. A plain string or a localized array of
+  `{language, content}` objects.
+- `support_versions` — Optional. A semver range string (`>=0.1.0-rc.6`), an
+  interval (`[0.1.0-rc.6, 0.1.1)`), or an array of versions
+  (`["0.1.0-rc.6","0.1.0-rc.7"]`). Omitted means any version.
+- `urls` — Optional. `{homepage, repository, issues}` links.
+- `relationship` — Optional. `{type, id, versions}[]` where `type` ∈
+  `dependency` | `incompatibility`, and `versions` is a semver range with
+  `*` meaning any version.
 
-## 工作流
+### Version Number Rules
 
-1. 向 `plugins/` 新增或修改插件 JSON 并 push 到 `main`；
-2. `aggregate.yml` 自动聚合出 `plugins.json` 并提交回仓库；
-3. 通过 `repository_dispatch`（事件类型 `plugins-updated`）通知
-   `dsh-plugins/dsh-plugins.github.io`；
-4. 站点仓库的 `sync-plugins.yml` 拉取 `plugins.json` 写入
-   `public/api/plugins.json` 并推送，触发其 Pages 部署。
+Version values in `support_versions` and `relationship[].versions` follow
+the id kind:
 
-> 通知站点仓库需要 `PLUGIN_MARKET_PAT`（一个拥有 `dsh-plugins.github.io`
-> 仓库 `contents: write` 权限的 Personal Access Token），配置在仓库
-> Settings → Secrets and variables → Actions。
+- **npm package ids** (`@scope/name`) — use npm version numbers (e.g.
+  `>=1.3.0`, `^0.14.0`).
+- **GitHub ids** (`github:owner/repo`) — use a git tag (`v1.3.0`) or a
+  commit hash (short or long, e.g. `dac813a`).
+
+## Workflow
+
+1. Add or update a plugin JSON under `plugins/` and push to `main`;
+2. `aggregate.yml` auto-aggregates `plugins.json` and commits it back;
+3. It notifies `dsh-plugins/dsh-plugins.github.io` via `repository_dispatch`
+   (event type `plugins-updated`);
+4. The site repo's `sync-plugins.yml` fetches `plugins.json`, writes it to
+   `public/api/plugins.json`, and pushes, triggering its Pages deploy.
+
+> Notifying the site repo requires `PLUGIN_MARKET_PAT` (a Personal Access
+> Token with `contents: write` on `dsh-plugins.github.io`), configured under
+> Settings → Secrets and variables → Actions in this repository.
 >
-> 创建步骤：GitHub → Settings → Developer settings → Personal access
-> tokens → Fine-grained tokens → Generate new token → 仅勾选
-> `dsh-plugins/dsh-plugins.github.io` 仓库，Repository permissions 里
-> `Contents: Read and write` → 生成后复制 token → 在本仓库
-> Settings → Secrets and variables → Actions → New repository secret
-> 命名为 `PLUGIN_MARKET_PAT` 粘贴保存。
+> To create one: GitHub → Settings → Developer settings → Personal access
+> tokens → Fine-grained tokens → Generate new token → select only the
+> `dsh-plugins/dsh-plugins.github.io` repository, set Repository permissions
+> → `Contents: Read and write` → generate and copy → in this repository
+> Settings → Secrets and variables → Actions → New repository secret, name
+> it `PLUGIN_MARKET_PAT` and save.
 >
-> 未配置 PAT 时聚合仍正常完成（自动跳过通知步骤），站点仓库的
-> `sync-plugins.yml` 每日定时（UTC 00:00）兜底同步，最迟 24 小时内生效。
+> Without a PAT the aggregation still succeeds (the notify step is skipped),
+> and the site repo's `sync-plugins.yml` falls back to a daily scheduled
+> sync (UTC 00:00), so changes land within 24 hours at worst.

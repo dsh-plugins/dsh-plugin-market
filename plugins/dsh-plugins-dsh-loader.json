@@ -12,5 +12,10 @@
     }
   ],
   "support_versions": ">=0.1.0-rc.1",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-loader",
+    "repository": "https://github.com/dsh-plugins/dsh-loader",
+    "issues": "https://github.com/dsh-plugins/dsh-loader/issues"
+  },
   "relationship": []
 }

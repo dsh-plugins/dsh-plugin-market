@@ -12,6 +12,11 @@
     }
   ],
   "support_versions": ">=0.1.0-rc.6",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-thought-buddy",
+    "repository": "https://github.com/dsh-plugins/dsh-thought-buddy",
+    "issues": "https://github.com/dsh-plugins/dsh-thought-buddy/issues"
+  },
   "relationship": [
     {
       "type": "dependency",
