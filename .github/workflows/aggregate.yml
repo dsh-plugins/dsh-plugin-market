@@ -39,7 +39,13 @@ jobs:
           fi
 
       - name: Notify dsh-plugins.github.io
-        if: always()
+        # Cross-repo repository_dispatch needs a PAT (GITHUB_TOKEN cannot
+        # dispatch into another repository). Without PLUGIN_MARKET_PAT this
+        # step is skipped; the aggregation itself still succeeds.
+        if: env.PAT != ''
+        continue-on-error: true
+        env:
+          PAT: ${{ secrets.PLUGIN_MARKET_PAT }}
         uses: peter-evans/repository-dispatch@v3
         with:
           token: ${{ secrets.PLUGIN_MARKET_PAT }}
