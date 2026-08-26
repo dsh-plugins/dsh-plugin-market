@@ -58,3 +58,13 @@ plugins.json              # 聚合产物（由 workflow 自动维护）
 > 通知站点仓库需要 `PLUGIN_MARKET_PAT`（一个拥有 `dsh-plugins.github.io`
 > 仓库 `contents: write` 权限的 Personal Access Token），配置在仓库
 > Settings → Secrets and variables → Actions。
+>
+> 创建步骤：GitHub → Settings → Developer settings → Personal access
+> tokens → Fine-grained tokens → Generate new token → 仅勾选
+> `dsh-plugins/dsh-plugins.github.io` 仓库，Repository permissions 里
+> `Contents: Read and write` → 生成后复制 token → 在本仓库
+> Settings → Secrets and variables → Actions → New repository secret
+> 命名为 `PLUGIN_MARKET_PAT` 粘贴保存。
+>
+> 未配置 PAT 时聚合仍正常完成（自动跳过通知步骤），站点仓库的
+> `sync-plugins.yml` 每日定时（UTC 00:00）兜底同步，最迟 24 小时内生效。
