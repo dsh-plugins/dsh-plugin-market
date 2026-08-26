@@ -90,6 +90,5 @@ the id kind:
 > Settings → Secrets and variables → Actions → New repository secret, name
 > it `PLUGIN_MARKET_PAT` and save.
 >
-> Without a PAT the aggregation still succeeds (the notify step is skipped),
-> and the site repo's `sync-plugins.yml` falls back to a daily scheduled
-> sync (UTC 00:00), so changes land within 24 hours at worst.
+> With `PLUGIN_MARKET_PAT` configured, the site repo syncs and deploys
+> automatically right after each push to `plugins/`.

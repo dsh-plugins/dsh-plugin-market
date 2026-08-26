@@ -89,5 +89,5 @@ plugins.json              # 聚合产物（由 workflow 自动维护）
 > Settings → Secrets and variables → Actions → New repository secret
 > 命名为 `PLUGIN_MARKET_PAT` 粘贴保存。
 >
-> 未配置 PAT 时聚合仍正常完成（自动跳过通知步骤），站点仓库的
-> `sync-plugins.yml` 每日定时（UTC 00:00）兜底同步，最迟 24 小时内生效。
+> 配置 `PLUGIN_MARKET_PAT` 后，每次向 `plugins/` 推送，站点仓库会自动
+> 同步并部署，无需手动触发。
