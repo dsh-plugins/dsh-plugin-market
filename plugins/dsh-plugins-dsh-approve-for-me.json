@@ -1,0 +1,22 @@
+{
+  "id": "@dsh-plugin/dsh-approve-for-me",
+  "name": "DSH Approve For Me",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Reviews and auto-approves command execution, adding an \"Approve For Me\" sandbox permission option"
+    },
+    {
+      "language": "zh-CN",
+      "content": "审查并自动批准命令执行，新增「替我同意」沙箱权限选项"
+    }
+  ],
+  "support_versions": ">=0.1.0-rc.6",
+  "relationship": [
+    {
+      "type": "dependency",
+      "id": "@dsh-plugin/dsh-loader",
+      "versions": ">=1.3.0"
+    }
+  ]
+}

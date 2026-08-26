@@ -1,0 +1,16 @@
+{
+  "id": "@dsh-plugin/dsh-loader",
+  "name": "DSH Loader",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "A version-aware runtime compatibility shim that keeps third-party plugins working unchanged across dsh upgrades"
+    },
+    {
+      "language": "zh-CN",
+      "content": "版本感知的运行时兼容层，让第三方插件在 dsh 升级后无需修改即可继续工作"
+    }
+  ],
+  "support_versions": ">=0.1.0-rc.1",
+  "relationship": []
+}

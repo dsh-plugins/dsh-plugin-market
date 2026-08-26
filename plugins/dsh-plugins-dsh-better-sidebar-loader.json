@@ -1,0 +1,22 @@
+{
+  "id": "@dsh-plugin/dsh-better-sidebar-loader",
+  "name": "DSH Better Sidebar Loader",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "A VSCode-style right sidebar (explorer / editor / terminal / git / browser) built on the dshloader stable API"
+    },
+    {
+      "language": "zh-CN",
+      "content": "基于 dshloader 稳定 API 的 VSCode 风格右侧边栏（资源管理器 / 编辑器 / 终端 / Git / 浏览器）"
+    }
+  ],
+  "support_versions": ">=0.1.0-rc.6",
+  "relationship": [
+    {
+      "type": "dependency",
+      "id": "@dsh-plugin/dsh-loader",
+      "versions": ">=1.3.0"
+    }
+  ]
+}

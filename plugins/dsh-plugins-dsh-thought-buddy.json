@@ -1,0 +1,22 @@
+{
+  "id": "@dsh-plugin/dsh-thought-buddy",
+  "name": "DSH Thought Buddy",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "A dynamic little avatar animation before the DeepSeek Harness \"deep diving\" state — GrokBot-style SVG animation or emoji carousel"
+    },
+    {
+      "language": "zh-CN",
+      "content": "在「Deep diving…」状态前插入动态小表情头像——GrokBot 风格 SVG 动画或 emoji 轮播"
+    }
+  ],
+  "support_versions": ">=0.1.0-rc.6",
+  "relationship": [
+    {
+      "type": "dependency",
+      "id": "@dsh-plugin/dsh-loader",
+      "versions": ">=1.3.0"
+    }
+  ]
+}
