@@ -1,0 +1,47 @@
+# Aggregates all plugin descriptor JSON files in plugins/ into a single
+# plugins.json at the repository root, then notifies dsh-plugins.github.io
+# via repository_dispatch so its site can publish public/api/plugins.json.
+name: Aggregate plugin descriptors
+
+on:
+  push:
+    branches: [main]
+    paths: ['plugins/**']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: aggregate
+  cancel-in-progress: true
+
+jobs:
+  aggregate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Aggregate plugins.json
+        run: node scripts/aggregate.mjs
+
+      - name: Commit and push if changed
+        run: |
+          if ! git diff --quiet -- plugins.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add plugins.json
+            git commit -m "chore(plugins): 重新聚合 plugins.json"
+            git push
+          else
+            echo "plugins.json unchanged, skipping commit"
+          fi
+
+      - name: Notify dsh-plugins.github.io
+        if: always()
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PLUGIN_MARKET_PAT }}
+          repository: dsh-plugins/dsh-plugins.github.io
+          event-type: plugins-updated
