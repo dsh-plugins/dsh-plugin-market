@@ -21,9 +21,9 @@
     "dsh": ">=0.1.0-rc.6"
   },
   "urls": {
-    "homepage": "https://github.com/mmyddd/dsh-bettersidebar-element-selection",
-    "repository": "https://github.com/mmyddd/dsh-bettersidebar-element-selection",
-    "issues": "https://github.com/mmyddd/dsh-bettersidebar-element-selection/issues"
+    "homepage": "https://github.com/dsh-plugins/dsh-bettersidebar-element-selection",
+    "repository": "https://github.com/dsh-plugins/dsh-bettersidebar-element-selection",
+    "issues": "https://github.com/dsh-plugins/dsh-bettersidebar-element-selection/issues"
   },
   "relationship": [
     { "type": "dependency", "id": "@dsh-plugin/dsh-loader", "versions": ">=1.3.0" },
