@@ -1,0 +1,36 @@
+{
+  "id": "@dsh-plugin/dsh-bettersidebar-element-selection",
+  "name": "BetterSidebar Element Selection",
+  "version": "0.1.0",
+  "main": "./lib/index.js",
+  "client": {
+    "main": "./lib/client.js"
+  },
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Pick web page elements into the chat. Press the crosshair in a framed page, hover to highlight with tag / size / color / font, and one click writes the element's selector, XPath, attributes, computed styles, text and HTML into the composer. Ships an in-frame bridge, a fenced same-origin proxy for remote pages (SSRF re-checked per redirect hop, no cookies or credentials forwarded), and a React controller other plugins consume through window.__dshElementSelection__."
+    },
+    {
+      "language": "zh-CN",
+      "content": "把网页元素点进聊天框。在框入的页面里按下十字准星，鼠标经过的元素高亮并显示 tag / 尺寸 / 颜色 / 字体，点一下就把它的选择器、XPath、属性、计算样式、文本与 HTML 写进输入框。含注入桥、供远端页面使用的受围栏代理（重定向逐跳复检 SSRF，不转发 cookie 与任何凭据），以及供其他插件通过 window.__dshElementSelection__ 取用的 React 控制器。"
+    }
+  ],
+  "support_versions": ">=0.1.0-rc.6",
+  "engines": {
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "urls": {
+    "homepage": "https://github.com/mmyddd/dsh-bettersidebar-element-selection",
+    "repository": "https://github.com/mmyddd/dsh-bettersidebar-element-selection",
+    "issues": "https://github.com/mmyddd/dsh-bettersidebar-element-selection/issues"
+  },
+  "relationship": [
+    { "type": "dependency", "id": "@dsh-plugin/dsh-loader", "versions": ">=1.3.0" },
+    { "type": "dependency", "id": "@dsh-plugin/dsh-better-sidebar-loader", "versions": ">=0.14.3" }
+  ],
+  "contributes": {
+    "tools": [],
+    "skills": []
+  }
+}
