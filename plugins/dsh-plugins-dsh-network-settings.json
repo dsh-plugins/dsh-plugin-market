@@ -11,7 +11,7 @@
       "content": "User-Agent 改写、HTTP/CONNECT/SOCKS5 代理与可配置请求自动重试，统一在「网络设置」标签页"
     }
   ],
-  "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+  "support_versions": "[0.1.5,)",
   "urls": {
     "homepage": "https://github.com/dsh-plugins/dsh-network-settings",
     "repository": "https://github.com/dsh-plugins/dsh-network-settings",
@@ -21,7 +21,7 @@
     {
       "type": "dependency",
       "id": "@dsh-plugin/dsh-loader",
-      "versions": ">=1.3.0"
+      "versions": "^2.0.0-0"
     }
   ]
 }

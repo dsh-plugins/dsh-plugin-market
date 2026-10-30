@@ -12,7 +12,7 @@
         "content": "审查并自动批准命令执行，新增「替我同意」沙箱权限选项"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+    "support_versions": "[0.1.5,)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-approve-for-me",
       "repository": "https://github.com/dsh-plugins/dsh-approve-for-me",
@@ -22,7 +22,7 @@
       {
         "type": "dependency",
         "id": "@dsh-plugin/dsh-loader",
-        "versions": ">=1.3.0"
+        "versions": "^2.0.0-0"
       }
     ]
   },
@@ -39,7 +39,7 @@
         "content": "DeepSeek Harness 辅助模型插件"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+    "support_versions": "[0.1.5,)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-auxiliary",
       "repository": "https://github.com/dsh-plugins/dsh-auxiliary",
@@ -49,7 +49,7 @@
       {
         "type": "dependency",
         "id": "@dsh-plugin/dsh-loader",
-        "versions": ">=1.3.0"
+        "versions": "^2.0.0-0"
       }
     ]
   },
@@ -125,7 +125,7 @@
         "content": "版本感知的运行时兼容层，让第三方插件在 dsh 升级后无需修改即可继续工作"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+    "support_versions": "[0.1.5,)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-loader",
       "repository": "https://github.com/dsh-plugins/dsh-loader",
@@ -146,7 +146,7 @@
         "content": "User-Agent 改写、HTTP/CONNECT/SOCKS5 代理与可配置请求自动重试，统一在「网络设置」标签页"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+    "support_versions": "[0.1.5,)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-network-settings",
       "repository": "https://github.com/dsh-plugins/dsh-network-settings",
@@ -156,7 +156,7 @@
       {
         "type": "dependency",
         "id": "@dsh-plugin/dsh-loader",
-        "versions": ">=1.3.0"
+        "versions": "^2.0.0-0"
       }
     ]
   },
@@ -173,7 +173,7 @@
         "content": "在「Deep diving…」状态前插入动态小表情头像——GrokBot 风格 SVG 动画或 emoji 轮播"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+    "support_versions": "[0.1.5,)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-thought-buddy",
       "repository": "https://github.com/dsh-plugins/dsh-thought-buddy",
@@ -183,7 +183,7 @@
       {
         "type": "dependency",
         "id": "@dsh-plugin/dsh-loader",
-        "versions": ">=1.3.0"
+        "versions": "^2.0.0-0"
       }
     ]
   }

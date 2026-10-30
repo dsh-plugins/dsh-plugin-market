@@ -11,7 +11,7 @@
       "content": "审查并自动批准命令执行，新增「替我同意」沙箱权限选项"
     }
   ],
-  "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
+  "support_versions": "[0.1.5,)",
   "urls": {
     "homepage": "https://github.com/dsh-plugins/dsh-approve-for-me",
     "repository": "https://github.com/dsh-plugins/dsh-approve-for-me",
@@ -21,7 +21,7 @@
     {
       "type": "dependency",
       "id": "@dsh-plugin/dsh-loader",
-      "versions": ">=1.3.0"
+      "versions": "^2.0.0-0"
     }
   ]
 }
