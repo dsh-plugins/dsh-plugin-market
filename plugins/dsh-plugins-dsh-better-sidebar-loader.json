@@ -11,7 +11,7 @@
       "content": "基于 dshloader 稳定 API 的 VSCode 风格右侧边栏（资源管理器 / 编辑器 / 终端 / Git / 浏览器）"
     }
   ],
-  "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+  "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
   "urls": {
     "homepage": "https://github.com/dsh-plugins/dsh-better-sidebar-loader",
     "repository": "https://github.com/dsh-plugins/dsh-better-sidebar-loader",
