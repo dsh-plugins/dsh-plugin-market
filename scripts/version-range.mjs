@@ -61,3 +61,12 @@ export function normalizeRange(value, context = '版本范围') {
 export function matchesRange(value, version) {
   return semver.satisfies(version, normalizeRange(value), { includePrerelease: true });
 }
+
+/** GitHub 提交哈希只接受字符串，避免正则隐式转换数组或数字。 */
+export function validateRelationship(relation, context) {
+  if (relation.id.startsWith('github:') && typeof relation.versions === 'string'
+      && /^[a-f0-9]{7,40}$/i.test(relation.versions)) {
+    return;
+  }
+  normalizeRange(relation.versions, context);
+}

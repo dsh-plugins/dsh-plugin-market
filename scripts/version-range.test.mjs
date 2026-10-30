@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { matchesRange, normalizeRange } from './version-range.mjs';
+import { matchesRange, normalizeRange, validateRelationship } from './version-range.mjs';
 
 test('多个区间取并集并保留端点与间隙', () => {
   const range = '[0.1.0-rc.6,0.2.0-rc.1);[0.2.1-rc.4,)';
@@ -32,4 +32,12 @@ test('非法声明包含插件与字段上下文', () => {
   for (const value of ['', ';', '[1.0.0,2.0.0);', '[2.0.0,1.0.0]', '(1.0.0,1.0.0]', '[foo,)', '[,2.0.0)', '(1.0.0,]', [], ['foo'], 1]) {
     assert.throws(() => normalizeRange(value, 'foo.support_versions'), /foo\.support_versions/);
   }
+});
+
+test('关联版本的哈希声明严格区分字符串和其他类型', () => {
+  validateRelationship({ id: 'github:foo/bar', versions: 'abcdefa' }, 'foo.relationship[0].versions');
+  for (const versions of [1234567, ['abcdefa']]) {
+    assert.throws(() => validateRelationship({ id: 'github:foo/bar', versions }, 'foo.relationship[0].versions'), /foo\.relationship\[0\]\.versions/);
+  }
+  validateRelationship({ id: 'foo', versions: ['1.0.0'] }, 'foo.relationship[0].versions');
 });
