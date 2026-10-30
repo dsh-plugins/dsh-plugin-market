@@ -3,6 +3,7 @@
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { normalizeRange } from './version-range.mjs';
 
 const repoRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const pluginsDir = join(repoRoot, 'plugins');
@@ -15,7 +16,15 @@ const files = readdirSync(pluginsDir)
 const plugins = files.map((f) => {
   const raw = readFileSync(join(pluginsDir, f), 'utf8');
   try {
-    return JSON.parse(raw);
+    const plugin = JSON.parse(raw);
+    normalizeRange(plugin.support_versions, `${plugin.id}.support_versions`);
+    for (const [index, relation] of (plugin.relationship ?? []).entries()) {
+      if (relation.id.startsWith('github:') && /^[a-f0-9]{7,40}$/i.test(relation.versions)) {
+        continue;
+      }
+      normalizeRange(relation.versions, `${plugin.id}.relationship[${index}].versions`);
+    }
+    return plugin;
   } catch (error) {
     throw new Error(`Failed to parse ${f}: ${error.message}`);
   }

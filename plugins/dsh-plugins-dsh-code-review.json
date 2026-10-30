@@ -11,7 +11,7 @@
       "content": "逐轮代码变更摘要、审查标签页与受保护的撤销功能"
     }
   ],
-  "support_versions": ">=0.1.0-rc.6",
+  "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
   "urls": {
     "homepage": "https://github.com/dsh-plugins/dsh-code-review",
     "repository": "https://github.com/dsh-plugins/dsh-code-review",

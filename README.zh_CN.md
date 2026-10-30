@@ -61,13 +61,21 @@ plugins.json              # 聚合产物（由 workflow 自动维护）
 
 ### 版本号规则
 
-`support_versions` 与 `relationship[].versions` 中的版本号写法取决于
-`id` 的类型：
+`support_versions` 声明 DSH 版本，`relationship[].versions` 声明关联插件的版本。
+两个字段均支持 SemVer 范围、精确版本数组和区间写法。GitHub 关联插件也可使用提交哈希。
 
-- **npm 包 id**（`@scope/name`）—— 使用 npm 版本号（如 `>=1.3.0`、
-  `^0.14.0`）。
-- **GitHub id**（`github:owner/repo`）—— 使用 git tag（`v1.3.0`）或
-  commit hash（短哈希长哈希均可，如 `dac813a`）。
+多个区间必须使用 `;` 分隔，各区间取并集。例如
+`[0.1.0-rc.6,0.2.0-rc.1);[0.2.1-rc.4,)` 表示支持第一段范围以及从
+`0.2.1-rc.4` 开始的所有版本。`[`、`]` 包含端点，`(`、`)` 排除端点；
+省略端点表示无界，无界端点必须使用圆括号。区间及端点两侧允许空白。
+版本按 SemVer 顺序比较，预发布版本参与比较。
+
+必须填写有效端点，禁止倒置边界、空区间和空分段；聚合时会报告插件与字段位置。
+省略 `support_versions` 或使用 `*` 表示任意版本。
+
+网站提供 `/api/dsh-plugins.json` 官方格式索引。网站每三小时读取市场目录、npm
+发布标签和 GitHub 版本标签，更新精确安装版本；多区间转换为使用 `||` 的标准范围。
+本地执行 `pnpm test` 和 `pnpm build` 验证并重新聚合目录。
 
 ## 工作流
 
@@ -75,8 +83,8 @@ plugins.json              # 聚合产物（由 workflow 自动维护）
 2. `aggregate.yml` 自动聚合出 `plugins.json` 并提交回仓库；
 3. 通过 `repository_dispatch`（事件类型 `plugins-updated`）通知
    `dsh-plugins/dsh-plugins.github.io`；
-4. 站点仓库的 `sync-plugins.yml` 拉取 `plugins.json` 写入
-   `public/api/plugins.json` 并推送，触发其 Pages 部署。
+4. 站点仓库的 `sync-plugins.yml` 拉取 `plugins.json`，生成两种格式的目录，
+   并直接部署到 GitHub Pages。
 
 > 通知站点仓库需要 `PLUGIN_MARKET_PAT`（一个拥有 `dsh-plugins.github.io`
 > 仓库 `contents: write` 权限的 Personal Access Token），配置在仓库

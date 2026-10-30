@@ -11,7 +11,7 @@
       "content": "DeepSeek Harness 辅助模型插件"
     }
   ],
-  "support_versions": ">=0.1.0-rc.6",
+  "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
   "urls": {
     "homepage": "https://github.com/dsh-plugins/dsh-auxiliary",
     "repository": "https://github.com/dsh-plugins/dsh-auxiliary",

@@ -1,0 +1,13 @@
+{
+  "name": "dsh-plugin-market",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.17.0",
+  "scripts": {
+    "build": "node scripts/aggregate.mjs",
+    "test": "node --test scripts/*.test.mjs"
+  },
+  "dependencies": {
+    "semver": "7.8.5"
+  }
+}

@@ -6,7 +6,7 @@ name: Aggregate plugin descriptors
 on:
   push:
     branches: [main]
-    paths: ['plugins/**']
+    paths: ['plugins/**', 'scripts/**', 'package.json', 'pnpm-lock.yaml', '.github/workflows/aggregate.yml']
   workflow_dispatch:
 
 permissions:
@@ -24,7 +24,18 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Aggregate plugins.json
-        run: node scripts/aggregate.mjs
+        uses: pnpm/action-setup@v4
+        with:
+          version: 11
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm build
 
       - name: Commit and push if changed
         run: |

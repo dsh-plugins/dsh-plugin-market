@@ -11,7 +11,7 @@
       "content": "在「Deep diving…」状态前插入动态小表情头像——GrokBot 风格 SVG 动画或 emoji 轮播"
     }
   ],
-  "support_versions": ">=0.1.0-rc.6",
+  "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
   "urls": {
     "homepage": "https://github.com/dsh-plugins/dsh-thought-buddy",
     "repository": "https://github.com/dsh-plugins/dsh-thought-buddy",
