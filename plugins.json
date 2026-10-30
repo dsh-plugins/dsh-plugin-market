@@ -12,7 +12,7 @@
         "content": "审查并自动批准命令执行，新增「替我同意」沙箱权限选项"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-approve-for-me",
       "repository": "https://github.com/dsh-plugins/dsh-approve-for-me",
@@ -39,7 +39,7 @@
         "content": "DeepSeek Harness 辅助模型插件"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-auxiliary",
       "repository": "https://github.com/dsh-plugins/dsh-auxiliary",
@@ -66,7 +66,7 @@
         "content": "基于 dshloader 稳定 API 的 VSCode 风格右侧边栏（资源管理器 / 编辑器 / 终端 / Git / 浏览器）"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-better-sidebar-loader",
       "repository": "https://github.com/dsh-plugins/dsh-better-sidebar-loader",
@@ -93,7 +93,7 @@
         "content": "逐轮代码变更摘要、审查标签页与受保护的撤销功能"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-code-review",
       "repository": "https://github.com/dsh-plugins/dsh-code-review",
@@ -125,7 +125,7 @@
         "content": "版本感知的运行时兼容层，让第三方插件在 dsh 升级后无需修改即可继续工作"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-loader",
       "repository": "https://github.com/dsh-plugins/dsh-loader",
@@ -146,7 +146,7 @@
         "content": "User-Agent 改写、HTTP/CONNECT/SOCKS5 代理与可配置请求自动重试，统一在「网络设置」标签页"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-network-settings",
       "repository": "https://github.com/dsh-plugins/dsh-network-settings",
@@ -173,7 +173,7 @@
         "content": "在「Deep diving…」状态前插入动态小表情头像——GrokBot 风格 SVG 动画或 emoji 轮播"
       }
     ],
-    "support_versions": "[0.1.0-rc.6,0.2.0-rc.1)",
+    "support_versions": "[0.1.0-rc.6,0.1.6-alpha.1)",
     "urls": {
       "homepage": "https://github.com/dsh-plugins/dsh-thought-buddy",
       "repository": "https://github.com/dsh-plugins/dsh-thought-buddy",
