@@ -161,6 +161,33 @@
     ]
   },
   {
+    "id": "@dsh-plugin/dsh-synapse",
+    "name": "DSH Synapse",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "QQ and Discord chat bridging, GitHub PR/Issue review, local hybrid memory and Skill management powered by persistent DSH sessions"
+      },
+      {
+        "language": "zh-CN",
+        "content": "基于 DSH 驻留会话的 QQ 与 Discord 聊天桥接、GitHub PR/Issue 审查、本地混合记忆及 Skill 管理"
+      }
+    ],
+    "support_versions": "[0.1.5,)",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-synapse",
+      "repository": "https://github.com/dsh-plugins/dsh-synapse",
+      "issues": "https://github.com/dsh-plugins/dsh-synapse/issues"
+    },
+    "relationship": [
+      {
+        "type": "dependency",
+        "id": "@dsh-plugin/dsh-loader",
+        "versions": "^2.0.0-dev.41151102394"
+      }
+    ]
+  },
+  {
     "id": "@dsh-plugin/dsh-thought-buddy",
     "name": "DSH Thought Buddy",
     "description": [
