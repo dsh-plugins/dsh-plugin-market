@@ -1,0 +1,20 @@
+{
+  "id": "github:zxbingoo/dsh-minimalist-worktree",
+  "name": "工作树(dsh-minimalist-worktree)",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Local or isolated Git worktree sessions, Codex-compatible default setup scripts, setup progress, workspace file previews and read-only Git diffs with submodule support. Archiving removes idle plugin-owned worktrees without snapshots, including uncommitted and ignored files, while preserving branches. No npm publication is required; public GitHub source is available."
+    },
+    {
+      "language": "zh-CN",
+      "content": "为 DSH 提供本地/隔离工作树选择、Codex 默认 setup 配置兼容、初始化进度，以及工作区文件预览和子模块只读 Git Diff。归档时清理空闲且归属可核验的工作树，保留分支；不创建快照，未提交与 ignored 文件会删除，请先提交成果。通过公开 GitHub 仓库分发。"
+    }
+  ],
+  "support_versions": ">=0.2.1-rc.5 <0.3.0-0",
+  "urls": {
+    "homepage": "https://github.com/zxbingoo/dsh-minimalist-worktree#readme",
+    "repository": "https://github.com/zxbingoo/dsh-minimalist-worktree",
+    "issues": "https://github.com/zxbingoo/dsh-minimalist-worktree/issues"
+  }
+}
