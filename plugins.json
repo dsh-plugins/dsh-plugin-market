@@ -203,6 +203,27 @@
     "relationship": []
   },
   {
+    "id": "@dsh-plugin/dsh-model-prompt",
+    "name": "DSH Model Prompt",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Matches prompt files against the current model and injects their guidance into the system prompt, replacing the prompt head when the model changes."
+      },
+      {
+        "language": "zh-CN",
+        "content": "按当前模型匹配提示词文件并向系统提示词注入专用指导，切换模型时替换头部而不是追加过期内容。"
+      }
+    ],
+    "support_versions": ">=0.2.0-0",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-model-prompt",
+      "repository": "https://github.com/dsh-plugins/dsh-model-prompt",
+      "issues": "https://github.com/dsh-plugins/dsh-model-prompt/issues"
+    },
+    "relationship": []
+  },
+  {
     "id": "@dsh-plugin/dsh-network-settings",
     "name": "DSH Network Settings",
     "description": [
@@ -228,6 +249,48 @@
         "versions": "^2.0.0-0"
       }
     ]
+  },
+  {
+    "id": "@dsh-plugin/dsh-spellcheck-off",
+    "name": "DSH Spellcheck Off",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Turns off browser spellcheck for every text input in the DSH Web UI, removing the red squiggles shown while typing Chinese, code, and proper nouns."
+      },
+      {
+        "language": "zh-CN",
+        "content": "关闭 DSH Web 界面所有文本输入框的浏览器原生拼写检查，消除输入中文、代码、专有名词时出现的红色波浪下划线。"
+      }
+    ],
+    "support_versions": ">=0.2.0-0",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-spellcheck-off",
+      "repository": "https://github.com/dsh-plugins/dsh-spellcheck-off",
+      "issues": "https://github.com/dsh-plugins/dsh-spellcheck-off/issues"
+    },
+    "relationship": []
+  },
+  {
+    "id": "@dsh-plugin/dsh-subagent-intro",
+    "name": "DSH Subagent Intro",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Injects a configurable introduction of subagent models right before the subagent tool description, so the model knows what each subagent model is good at before delegating."
+      },
+      {
+        "language": "zh-CN",
+        "content": "在子代理工具说明之前注入可配置的子代理模型介绍，让模型在委派前就知道每个子代理模型擅长什么、适合在什么场景使用。"
+      }
+    ],
+    "support_versions": ">=0.2.0-0",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-subagent-intro",
+      "repository": "https://github.com/dsh-plugins/dsh-subagent-intro",
+      "issues": "https://github.com/dsh-plugins/dsh-subagent-intro/issues"
+    },
+    "relationship": []
   },
   {
     "id": "@dsh-plugin/dsh-synapse",

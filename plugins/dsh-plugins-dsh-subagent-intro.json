@@ -1,0 +1,21 @@
+{
+  "id": "@dsh-plugin/dsh-subagent-intro",
+  "name": "DSH Subagent Intro",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Injects a configurable introduction of subagent models right before the subagent tool description, so the model knows what each subagent model is good at before delegating."
+    },
+    {
+      "language": "zh-CN",
+      "content": "在子代理工具说明之前注入可配置的子代理模型介绍，让模型在委派前就知道每个子代理模型擅长什么、适合在什么场景使用。"
+    }
+  ],
+  "support_versions": ">=0.2.0-0",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-subagent-intro",
+    "repository": "https://github.com/dsh-plugins/dsh-subagent-intro",
+    "issues": "https://github.com/dsh-plugins/dsh-subagent-intro/issues"
+  },
+  "relationship": []
+}

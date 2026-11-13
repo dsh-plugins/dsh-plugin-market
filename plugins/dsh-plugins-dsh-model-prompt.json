@@ -1,0 +1,21 @@
+{
+  "id": "@dsh-plugin/dsh-model-prompt",
+  "name": "DSH Model Prompt",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Matches prompt files against the current model and injects their guidance into the system prompt, replacing the prompt head when the model changes."
+    },
+    {
+      "language": "zh-CN",
+      "content": "按当前模型匹配提示词文件并向系统提示词注入专用指导，切换模型时替换头部而不是追加过期内容。"
+    }
+  ],
+  "support_versions": ">=0.2.0-0",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-model-prompt",
+    "repository": "https://github.com/dsh-plugins/dsh-model-prompt",
+    "issues": "https://github.com/dsh-plugins/dsh-model-prompt/issues"
+  },
+  "relationship": []
+}

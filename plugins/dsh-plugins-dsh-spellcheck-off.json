@@ -1,0 +1,21 @@
+{
+  "id": "@dsh-plugin/dsh-spellcheck-off",
+  "name": "DSH Spellcheck Off",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Turns off browser spellcheck for every text input in the DSH Web UI, removing the red squiggles shown while typing Chinese, code, and proper nouns."
+    },
+    {
+      "language": "zh-CN",
+      "content": "关闭 DSH Web 界面所有文本输入框的浏览器原生拼写检查，消除输入中文、代码、专有名词时出现的红色波浪下划线。"
+    }
+  ],
+  "support_versions": ">=0.2.0-0",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-spellcheck-off",
+    "repository": "https://github.com/dsh-plugins/dsh-spellcheck-off",
+    "issues": "https://github.com/dsh-plugins/dsh-spellcheck-off/issues"
+  },
+  "relationship": []
+}
