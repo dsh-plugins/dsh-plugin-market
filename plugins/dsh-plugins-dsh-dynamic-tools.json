@@ -1,0 +1,21 @@
+{
+  "id": "@dsh-plugin/dsh-dynamic-tools",
+  "name": "DSH Dynamic Tools",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Freezes the tool declaration list after a session's first step and delivers tools that appear later as trailing context, so a mid-conversation tool change no longer invalidates the cached prompt prefix."
+    },
+    {
+      "language": "zh-CN",
+      "content": "会话首步之后冻结请求中的工具声明列表，之后出现的工具以对话尾部消息下发，中途的工具变化不再让已缓存的提示词前缀失效。"
+    }
+  ],
+  "support_versions": "[0.2.2-rc.2,0.3.0)",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-dynamic-tools",
+    "repository": "https://github.com/dsh-plugins/dsh-dynamic-tools",
+    "issues": "https://github.com/dsh-plugins/dsh-dynamic-tools/issues"
+  },
+  "relationship": []
+}
