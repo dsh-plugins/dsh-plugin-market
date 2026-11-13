@@ -272,6 +272,27 @@
     "relationship": []
   },
   {
+    "id": "@dsh-plugin/dsh-subagent-control",
+    "name": "DSH Subagent Control",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Registers subagent_status to inspect a subagent's work digest, context occupancy and model route, and subagent_control to compact, re-route, interrupt or wake it."
+      },
+      {
+        "language": "zh-CN",
+        "content": "注册 subagent_status 观测子代理的工作摘要、上下文占用与模型路由，注册 subagent_control 对其执行压缩、切换模型、中断与唤醒。"
+      }
+    ],
+    "support_versions": "[0.2.2-rc.1,0.3.0-0)",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-subagent-control",
+      "repository": "https://github.com/dsh-plugins/dsh-subagent-control",
+      "issues": "https://github.com/dsh-plugins/dsh-subagent-control/issues"
+    },
+    "relationship": []
+  },
+  {
     "id": "@dsh-plugin/dsh-subagent-intro",
     "name": "DSH Subagent Intro",
     "description": [
@@ -345,6 +366,27 @@
         "versions": "^2.0.0-dev.42783642741"
       }
     ]
+  },
+  {
+    "id": "@dsh-plugin/dsh-ui-experience",
+    "name": "DSH UI Experience",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Makes the interface follow the Material You palette matugen generates on the system and unifies the interface border width, both toggled from a settings row."
+      },
+      {
+        "language": "zh-CN",
+        "content": "让界面跟随系统 matugen 生成的 Material You 配色，并统一界面边框宽度，均可在设置行内开关。"
+      }
+    ],
+    "support_versions": ">=0.2.0-0",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-ui-experience",
+      "repository": "https://github.com/dsh-plugins/dsh-ui-experience",
+      "issues": "https://github.com/dsh-plugins/dsh-ui-experience/issues"
+    },
+    "relationship": []
   },
   {
     "id": "@dsh-plugin/dsh-web-search",

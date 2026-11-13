@@ -1,0 +1,21 @@
+{
+  "id": "@dsh-plugin/dsh-ui-experience",
+  "name": "DSH UI Experience",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Makes the interface follow the Material You palette matugen generates on the system and unifies the interface border width, both toggled from a settings row."
+    },
+    {
+      "language": "zh-CN",
+      "content": "让界面跟随系统 matugen 生成的 Material You 配色，并统一界面边框宽度，均可在设置行内开关。"
+    }
+  ],
+  "support_versions": ">=0.2.0-0",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-ui-experience",
+    "repository": "https://github.com/dsh-plugins/dsh-ui-experience",
+    "issues": "https://github.com/dsh-plugins/dsh-ui-experience/issues"
+  },
+  "relationship": []
+}

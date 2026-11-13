@@ -1,0 +1,21 @@
+{
+  "id": "@dsh-plugin/dsh-subagent-control",
+  "name": "DSH Subagent Control",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Registers subagent_status to inspect a subagent's work digest, context occupancy and model route, and subagent_control to compact, re-route, interrupt or wake it."
+    },
+    {
+      "language": "zh-CN",
+      "content": "注册 subagent_status 观测子代理的工作摘要、上下文占用与模型路由，注册 subagent_control 对其执行压缩、切换模型、中断与唤醒。"
+    }
+  ],
+  "support_versions": "[0.2.2-rc.1,0.3.0-0)",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-subagent-control",
+    "repository": "https://github.com/dsh-plugins/dsh-subagent-control",
+    "issues": "https://github.com/dsh-plugins/dsh-subagent-control/issues"
+  },
+  "relationship": []
+}
