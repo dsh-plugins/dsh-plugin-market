@@ -251,6 +251,33 @@
     ]
   },
   {
+    "id": "@dsh-plugin/dsh-session-tree",
+    "name": "DSH Session Tree",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Tree-structured conversations for the official DSH chat: switch message branches, edit user messages in place, recall pending or sent input, and retry assistant replies. Stores the complete tree separately and exports the active path in the official session format."
+      },
+      {
+        "language": "zh-CN",
+        "content": "为官方 DSH 聊天提供树状会话：切换消息分支、原位编辑用户消息、撤回答复和待发送输入、重试助手回复。完整树独立保存，激活路径以官方会话格式导出。"
+      }
+    ],
+    "support_versions": "0.2.2-rc.1 || 0.2.2-rc.2",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-session-tree",
+      "repository": "https://github.com/dsh-plugins/dsh-session-tree",
+      "issues": "https://github.com/dsh-plugins/dsh-session-tree/issues"
+    },
+    "relationship": [
+      {
+        "type": "dependency",
+        "id": "@dsh-plugin/dsh-loader",
+        "versions": "^2.0.0-dev.43473963317"
+      }
+    ]
+  },
+  {
     "id": "@dsh-plugin/dsh-spellcheck-off",
     "name": "DSH Spellcheck Off",
     "description": [
