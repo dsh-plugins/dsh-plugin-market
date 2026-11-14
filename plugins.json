@@ -102,6 +102,27 @@
     ]
   },
   {
+    "id": "@dsh-plugin/dsh-claude-provider",
+    "name": "DSH Claude Provider",
+    "description": [
+      {
+        "language": "en-US",
+        "content": "Adds a dedicated Claude provider type with an Anthropic Messages form, a per-model adaptive thinking switch, thinking budgets for budget-driven models, and paginated Anthropic model discovery that fills recorded capacities for known Claude models."
+      },
+      {
+        "language": "zh-CN",
+        "content": "新增专用的 Claude 提供商类型，提供 Anthropic Messages 表单、逐模型自适应思考开关、预算思考模型的思考 token 预算，以及分页的 Anthropic 模型探测，并为已知 Claude 模型预填录制的容量参数。"
+      }
+    ],
+    "support_versions": "[0.2.2-rc.2,0.3.0)",
+    "urls": {
+      "homepage": "https://github.com/dsh-plugins/dsh-claude-provider",
+      "repository": "https://github.com/dsh-plugins/dsh-claude-provider",
+      "issues": "https://github.com/dsh-plugins/dsh-claude-provider/issues"
+    },
+    "relationship": []
+  },
+  {
     "id": "@dsh-plugin/dsh-code-review",
     "name": "DSH Code Review",
     "description": [
