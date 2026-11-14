@@ -1,0 +1,27 @@
+{
+  "id": "@dsh-plugin/dsh-mode-builder",
+  "name": "DSH Mode Builder",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Derive custom Agent modes from Standard, Minimal, PTC, Creator, or any existing mode in the plugin settings page: pick the tools and SKILL a mode keeps, then choose the new mode when starting a session."
+    },
+    {
+      "language": "zh-CN",
+      "content": "在插件配置页从标准、极简、PTC、创造或任意既有模式派生自定义 Agent 模式：勾选要保留的工具与 SKILL，新建会话时直接选用。"
+    }
+  ],
+  "support_versions": ">=0.2.2-rc.1 <0.3.0",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-mode-builder",
+    "repository": "https://github.com/dsh-plugins/dsh-mode-builder",
+    "issues": "https://github.com/dsh-plugins/dsh-mode-builder/issues"
+  },
+  "relationship": [
+    {
+      "type": "dependency",
+      "id": "@dsh-plugin/dsh-loader",
+      "versions": "^2.0.0-dev.43473963317"
+    }
+  ]
+}
