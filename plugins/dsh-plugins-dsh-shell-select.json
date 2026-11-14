@@ -1,0 +1,27 @@
+{
+  "id": "@dsh-plugin/dsh-shell-select",
+  "name": "DSH Shell Select",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Choose the shell every agent command runs in — PowerShell, cmd, Git Bash, WSL, bash, zsh, fish or sh — with discovery, an explicit path override, per-shell status facts, a fixed self-test, and a refusal before any process exists when the selected shell cannot be confined."
+    },
+    {
+      "language": "zh-CN",
+      "content": "选择每个智能体命令运行所用的 Shell——PowerShell、cmd、Git Bash、WSL、bash、zsh、fish 或 sh；支持自动探测、显式路径覆盖、逐 Shell 状态事实、固定自检，并在所选 Shell 无法被沙箱限制时于任何进程创建前拒绝执行。"
+    }
+  ],
+  "support_versions": "[0.2.2-0,0.3.0)",
+  "urls": {
+    "homepage": "https://github.com/dsh-plugins/dsh-shell-select",
+    "repository": "https://github.com/dsh-plugins/dsh-shell-select",
+    "issues": "https://github.com/dsh-plugins/dsh-shell-select/issues"
+  },
+  "relationship": [
+    {
+      "type": "dependency",
+      "id": "@dsh-plugin/dsh-loader",
+      "versions": "^2.0.0-dev.41570953193"
+    }
+  ]
+}
