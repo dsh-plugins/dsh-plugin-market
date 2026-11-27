@@ -1,0 +1,20 @@
+{
+  "id": "dsh-science-review",
+  "name": "DSH Science Review",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Reviews answers against the user's instructions, tool results and delivered files. Findings and quoted evidence appear beneath the answer."
+    },
+    {
+      "language": "zh-CN",
+      "content": "对照用户要求、工具记录和交付文件审查回答，并在回答下方展示发现的问题及证据原文。"
+    }
+  ],
+  "support_versions": ">=0.2.2-rc.5 <0.2.3-0 || >=0.2.3-alpha.2 <0.2.4-0",
+  "urls": {
+    "homepage": "https://github.com/SPYfighting/dsh-science-review",
+    "repository": "https://github.com/SPYfighting/dsh-science-review",
+    "issues": "https://github.com/SPYfighting/dsh-science-review/issues"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "id": "dsh-science-plugin",
+  "name": "DSH Science Workbench",
+  "description": [
+    {
+      "language": "en-US",
+      "content": "Organizes research questions, target results and supporting evidence in a project dashboard, and assigns research tasks to specialist agents."
+    },
+    {
+      "language": "zh-CN",
+      "content": "在项目面板管理研究问题、目标结果与支持证据，并向专业子代理分派科研任务。"
+    }
+  ],
+  "support_versions": ">=0.2.2-rc.3 <0.2.3-0",
+  "urls": {
+    "homepage": "https://github.com/SPYfighting/dsh-science-plugin",
+    "repository": "https://github.com/SPYfighting/dsh-science-plugin",
+    "issues": "https://github.com/SPYfighting/dsh-science-plugin/issues"
+  }
+}
